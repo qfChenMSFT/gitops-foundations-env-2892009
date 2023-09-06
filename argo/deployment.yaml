@@ -20,11 +20,11 @@ spec:
         image: kevinbowersoxteach/gitops-foundations:1.0
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8085
+        - containerPort: 8080
         livenessProbe:
           httpGet:
             path: /actuator/health
-            port: 8085
+            port: 8080
           initialDelaySeconds: 5
           periodSeconds: 10
           failureThreshold: 2
